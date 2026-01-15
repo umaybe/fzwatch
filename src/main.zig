@@ -5,11 +5,13 @@ pub const Event = @import("watchers/interfaces.zig").Event;
 const watchers = struct {
     pub const macos = @import("watchers/macos.zig");
     pub const linux = @import("watchers/linux.zig");
+    pub const windows = @import("watchers/windows.zig");
 };
 
 pub const Watcher = switch (builtin.os.tag) {
     .macos => watchers.macos.MacosWatcher,
     .linux => watchers.linux.LinuxWatcher,
+    .windows => watchers.windows.WindowsWatcher,
     else => @compileError("Unsupported OS"),
 };
 
