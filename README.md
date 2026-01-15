@@ -1,6 +1,6 @@
 # fzwatch
 
-A lightweight and cross-platform file watcher for your Zig projects.
+A fork of fzwatch with windows support.
 
 > [!NOTE]
 > This project exists to support [fancy-cat](https://github.com/freref/fancy-cat) and has limited features.
